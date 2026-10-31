@@ -19,11 +19,11 @@ main{max-width:650px;margin:auto;position:relative;background:#061737;min-height
 
 /* Contador independente, sobreposto à parte inferior da arte original do menu */
 .countdown{position:absolute;left:18%;right:18%;top:77%;z-index:3;text-align:center;line-height:1.15;pointer-events:none}
-.countdown-title{color:#ffce17;font-size:clamp(10px,2.5vw,16px);font-weight:900;letter-spacing:.035em;margin-bottom:9px;text-shadow:0 2px 5px #00152d}
+.countdown-title{display:inline-block;background:#ffffff;color:#061735;padding:5px 12px;border-radius:7px;font-size:clamp(10px,2.5vw,16px);font-weight:900;letter-spacing:.035em;margin-bottom:9px;text-shadow:0 1px 2px #ffffffaa}
 .countdown-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(4px,1.4vw,10px)}
-.countdown-unit{border:1.5px solid #ffce17;border-radius:10px;background:#061735f2;color:#ffce17;font-size:clamp(18px,4.5vw,30px);font-weight:900;font-variant-numeric:tabular-nums;padding:8px 2px 7px;box-shadow:0 4px 12px #0006}
-.countdown-unit small{display:block;color:#fff;font-size:clamp(7px,1.5vw,10px);font-weight:800;letter-spacing:0;margin-top:4px}
-.countdown-finished{grid-column:1/-1;background:#061735ee;color:#ffce17;border:1px solid #ffce17;border-radius:10px;padding:12px;font-weight:900;font-size:clamp(12px,3vw,18px)}
+.countdown-unit{border:1.5px solid #ffce17;border-radius:10px;background:#061735;color:#ffce17;font-size:clamp(18px,4.5vw,30px);font-weight:900;font-variant-numeric:tabular-nums;padding:8px 2px 7px;box-shadow:0 4px 12px #0006}
+.countdown-unit small{display:block;color:#ffffff;font-size:clamp(7px,1.5vw,10px);font-weight:800;letter-spacing:0;margin-top:4px}
+.countdown-finished{grid-column:1/-1;background:#ffffff;color:#061735;border:1px solid #ffce17;border-radius:10px;padding:12px;font-weight:900;font-size:clamp(12px,3vw,18px)}
 </style></head><body>
 <main>
 <section class="page active" id="inicio"><img class="poster" src="imagens/inicio.png" alt="Abertura do 2º Torneio Vôlei de Sexta"><button class="hit" style="left:18%;top:82%;width:64%;height:8%" aria-label="Entrar no evento" onclick="go('menu')"></button></section>
