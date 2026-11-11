@@ -24,17 +24,70 @@ main{max-width:650px;margin:auto;position:relative;background:#061737;min-height
 .countdown-unit{border:1.5px solid #ffce17;border-radius:10px;background:#061735;color:#ffce17;font-size:clamp(18px,4.5vw,30px);font-weight:900;font-variant-numeric:tabular-nums;padding:8px 2px 7px;box-shadow:0 4px 12px #0006}
 .countdown-unit small{display:block;color:#ffffff;font-size:clamp(7px,1.5vw,10px);font-weight:800;letter-spacing:0;margin-top:4px}
 .countdown-finished{grid-column:1/-1;background:#ffffff;color:#061735;border:1px solid #ffce17;border-radius:10px;padding:12px;font-weight:900;font-size:clamp(12px,3vw,18px)}
+
+/* Seção Times e Chaveamento: imagem aprovada e abas funcionais */
+#timeschaveamento{background:#f9f6ec;min-height:100dvh}
+.tc-poster{display:block;width:100%;height:auto}
+.tc-chaves{display:none;min-height:100dvh;padding:110px 20px 36px;background:linear-gradient(145deg,#fffdf6,#fff5db);color:#061b42;line-height:1.35;position:relative}
+.tc-chaves h1{font-size:clamp(28px,7vw,46px);font-weight:1000;line-height:1.05;margin:0 0 18px;color:#061b42}
+.tc-tabs{display:flex;gap:8px;margin:0 0 24px}
+.tc-tabs button{flex:1;border:2px solid #061b42;border-radius:20px;padding:12px 4px;font-weight:900;color:#061b42;background:white;cursor:pointer;font-size:clamp(12px,3vw,18px)}
+.tc-tabs button.active{background:#ffca08;border-color:#ffca08}
+.tc-round{background:white;border:1px solid #f3d98a;border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:0 6px 15px #0a193b1a}
+.tc-round h2{font-size:18px;background:#ffca08;display:inline-block;padding:5px 14px;margin:0 0 10px;border-radius:8px}
+.tc-match{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:9px 0;border-top:1px solid #e9e2d1;font-size:clamp(11px,2.8vw,16px);font-weight:800}
+.tc-match span{flex:1}.tc-match span:last-child{text-align:right}.tc-match b{color:#df9600}
+.tc-note{font-size:14px;margin:0 0 20px}
+.tc-menu-fixed{position:absolute;right:4%;top:2%;width:12%;height:5%;border:0;background:transparent;cursor:pointer;z-index:4}
+.tc-menu-chaves{position:absolute;right:20px;top:20px;background:#ffca08;border:0;border-radius:12px;padding:10px 16px;font-weight:900;cursor:pointer}
+
+/* Abas visuais e funcionais, reproduzindo o modelo aprovado */
+.tc-switch{position:absolute;z-index:5;left:3%;right:3%;display:flex;align-items:center;height:5.05%;border:2px solid #071b42;border-radius:999px;background:#fffdfa;box-shadow:0 4px 8px #0002;overflow:hidden;line-height:1}
+.tc-switch button{width:50%;height:100%;border:0;background:transparent;color:#071b42;display:flex;align-items:center;justify-content:center;gap:clamp(4px,1.4vw,11px);font-family:Arial,sans-serif;font-size:clamp(12px,3.6vw,23px);font-style:italic;font-weight:900;cursor:pointer;white-space:nowrap;padding:0 4px}
+.tc-switch button.selected{background:linear-gradient(120deg,#ffcf00,#ffb900);border-radius:999px;box-shadow:0 3px 8px #0003}
+.tc-switch svg{width:clamp(19px,5vw,37px);height:clamp(19px,5vw,37px);fill:currentColor;stroke:currentColor;flex-shrink:0}
+.tc-switch button:focus-visible{outline:3px solid #f5a900;outline-offset:-4px}
+.tc-switch-times{top:25.75%}.tc-switch-chaves{top:14.25%}
+
+/* Vídeo inserido abaixo da arte do menu, sem deslocar os botões e o contador */
+.menu-art{position:relative;width:100%;line-height:0}
+.video-section{position:relative;background:linear-gradient(160deg,#061737,#0c3470);padding:22px 18px 32px;line-height:1.4;text-align:center;border-top:3px solid #ffcb05}
+.video-section h2{margin:0 0 16px;color:#ffcb05;font-size:clamp(18px,4vw,26px);font-weight:900;letter-spacing:.035em}
+.video-section video{display:block;width:min(100%,380px);max-height:75dvh;aspect-ratio:480/856;object-fit:contain;margin:0 auto;background:#020a1a;border:2px solid #ffcb05;border-radius:15px;box-shadow:0 12px 28px #0007}
+
+/* Página de vídeo com arte aprovada e vídeo ampliado */
+#videoabertura{background:#06152f}
+.video-art{position:relative;width:100%;line-height:0}
+.video-art>.poster{width:100%;display:block}
+.video-large{position:absolute;left:7%;top:12%;width:86%;height:69%;display:flex;align-items:center;justify-content:center;line-height:normal}
+.video-large video{width:100%;height:100%;object-fit:contain;background:#000;border:3px solid #ffc800;border-radius:15px;box-shadow:0 12px 35px #000a}
+.video-sound{position:absolute;top:3%;right:3%;z-index:2;border:1px solid #ffcc00;background:#061a3b;color:white;border-radius:25px;padding:10px 14px;font-weight:800;cursor:pointer}
+.video-next{position:absolute;left:17%;top:84%;width:66%;height:8.4%;background:transparent;border:0;cursor:pointer}
+.video-next:focus-visible{outline:3px solid white;outline-offset:2px}
+@media(min-width:700px){.video-large{left:8%;width:84%;top:13%;height:68%}}
 </style></head><body>
 <main>
-<section class="page active" id="inicio"><img class="poster" src="imagens/inicio.png" alt="Abertura do 2º Torneio Vôlei de Sexta"><button class="hit" style="left:18%;top:82%;width:64%;height:8%" aria-label="Entrar no evento" onclick="go('menu')"></button></section>
-<section class="page" id="menu"><img class="poster" src="imagens/menu.png" alt="Menu do torneio">
+<section class="page active" id="inicio"><img class="poster" src="imagens/inicio.png" alt="Abertura do 2º Torneio Vôlei de Sexta"><button class="hit" style="left:18%;top:86.1%;width:64%;height:8.1%" aria-label="Entrar no evento" onclick="go('videoabertura')"></button></section>
+
+<section class="page" id="videoabertura" aria-label="Vídeo de abertura do torneio">
+ <div class="video-art">
+  <img class="poster" src="imagens/video_abertura_fundo.png" alt="Arte azul-marinho e amarela com botão Prosseguir">
+  <div class="video-large">
+   <video id="introVideo" src="videos/video_torneio.mp4" autoplay muted playsinline loop preload="auto" controls aria-label="Vídeo de apresentação do torneio">Seu navegador não suporta vídeos.</video>
+   <button class="video-sound" id="soundToggle" type="button" onclick="toggleIntroSound()">🔇 ATIVAR SOM</button>
+  </div>
+  <button class="video-next" type="button" aria-label="Prosseguir para o menu" onclick="go('menu')"></button>
+ </div>
+</section>
+<section class="page" id="menu"><div class="menu-art"><img class="poster" src="imagens/menu.png" alt="Menu do torneio">
 <button class="hit" style="left:4%;top:33.8%;width:45%;height:11%" aria-label="Informações gerais" onclick="go('informacoes')"></button>
 <button class="hit" style="left:51%;top:33.8%;width:45%;height:11%" aria-label="Investimento e inscrições" onclick="go('inscricoes')"></button>
 <button class="hit" style="left:4%;top:45.4%;width:45%;height:11%" aria-label="Regulamento" onclick="go('regulamento')"></button>
-<button class="hit" style="left:51%;top:45.4%;width:45%;height:11%" aria-label="Times e chaveamento" onclick="modal('breve')"></button>
+<button class="hit" style="left:51%;top:45.4%;width:45%;height:11%" aria-label="Times e chaveamento" onclick="openTimes()"></button>
 <button class="hit" style="left:4%;top:57%;width:45%;height:11%" aria-label="Premiações" onclick="go('premiacoes')"></button>
 <button class="hit" style="left:51%;top:57%;width:45%;height:11%" aria-label="Fotografia oficial" onclick="go('fotografia')"></button>
 <div class="countdown" role="timer" aria-label="Contagem regressiva para o torneio"><div class="countdown-title">CONTAGEM REGRESSIVA</div><div class="countdown-grid" id="countdown-values"><div class="countdown-unit">--<small>DIAS</small></div><div class="countdown-unit">--<small>HORAS</small></div><div class="countdown-unit">--<small>MINUTOS</small></div><div class="countdown-unit">--<small>SEGUNDOS</small></div></div></div>
+</div>
 </section>
 <section class="page" id="informacoes"><img class="poster" src="imagens/informacoes.png" alt="Informações gerais do torneio">
 <button class="hit" style="right:5%;top:1%;width:12%;height:6%" aria-label="Abrir menu" onclick="go('menu')"></button>
@@ -51,11 +104,26 @@ main{max-width:650px;margin:auto;position:relative;background:#061737;min-height
 <section class="page" id="fotografia"><img class="poster" src="imagens/fotografia.png" alt="Fotografia oficial pela Foco Radical">
 <button class="hit" style="right:4%;top:1%;width:12%;height:6%" aria-label="Abrir menu" onclick="go('menu')"></button>
 <a class="hit" style="left:8%;top:74%;width:85%;height:9%" href="https://www.focoradical.com.br/" target="_blank" rel="noopener" aria-label="Conheça a Foco Radical"></a></section>
+<section class="page" id="timeschaveamento"><div id="tc-times" style="position:relative"><img class="tc-poster" src="imagens/times.png" alt="Times do torneio: seis equipes, logos e integrantes"><button class="hit" style="left:50%;top:25.7%;width:44%;height:5.1%;z-index:5" aria-label="Ver chaveamento" onclick="setTCTab('chaveamento')"></button><button class="hit" style="right:3%;top:1%;width:14%;height:7%" aria-label="Abrir menu" onclick="go('menu')"></button></div><div id="tc-chaves" style="display:none;position:relative"><img class="tc-poster" src="imagens/chaveamento.png" alt="Chaveamento oficial: 15 jogos classificatórios, semifinais e final"><button class="hit" style="left:10%;top:13.2%;width:38%;height:5.5%;z-index:5" aria-label="Ver times" onclick="setTCTab('times')"></button><button class="hit" style="right:2%;top:1%;width:14%;height:7%" aria-label="Abrir menu" onclick="go('menu')"></button></div></section>
 </main>
 <div class="modal" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="if(event.target===this)closeModal()"><div class="dialog"><button class="close" onclick="closeModal()" aria-label="Fechar">×</button><div id="modalContent"></div></div></div>
 <div class="notice" id="notice">Chave Pix copiada!</div>
 <script>
-function go(id){document.querySelectorAll('.page').forEach(e=>e.classList.toggle('active',e.id===id));window.scrollTo(0,0);history.replaceState(null,'','#'+id)}
+function openTimes(){setTCTab('times');go('timeschaveamento')}
+function setTCTab(tab){document.getElementById('tc-times').style.display=tab==='times'?'block':'none';document.getElementById('tc-chaves').style.display=tab==='chaveamento'?'block':'none';window.scrollTo(0,0)}
+function go(id){
+ const video=document.getElementById('introVideo');
+ if(video && id!=='videoabertura'){video.pause();video.currentTime=0;video.muted=true;const btn=document.getElementById('soundToggle');if(btn)btn.textContent='🔇 ATIVAR SOM'}
+ document.querySelectorAll('.page').forEach(e=>e.classList.toggle('active',e.id===id));
+ window.scrollTo(0,0);history.replaceState(null,'','#'+id);
+ if(video && id==='videoabertura'){video.muted=true;video.play().catch(()=>{})}
+}
+function toggleIntroSound(){
+ const video=document.getElementById('introVideo'),btn=document.getElementById('soundToggle');
+ video.muted=!video.muted;
+ btn.textContent=video.muted?'🔇 ATIVAR SOM':'🔊 DESATIVAR SOM';
+ if(video.paused)video.play().catch(()=>{});
+}
 const rules=`<h2 id="modalTitle">Regras gerais do jogo</h2>
 <h3>Regras do jogo</h3><ul>
 <li>A altura da rede será de 2,35 m.</li>
